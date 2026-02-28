@@ -1,0 +1,241 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: "Oswald", sans-serif;
+    padding: 0px;
+    color: white;
+    background-color: #111111;
+    height: 1000px;
+    margin-top: 50px;
+
+}
+.header {
+    width: 100%;
+    height: 60px;
+    margin-right: 10px;
+    margin-left: 45px;
+    justify-content: space-between;
+    flex-direction: row;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    z-index: 1;
+
+}
+
+.right-section {
+    width:400px;
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    margin-right: 80px;
+}
+
+.home-h, .products-h, .contact-h{
+    color: white;
+    text-decoration: none;
+    margin-right: 40px;
+}
+.explore-h{
+    background-color: #9b0000;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    
+}
+
+.explore-h:hover {
+    background-color: #dc0000;
+    color: #ffffff;
+    transition: 0.2s ease;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    margin-left: 20px;
+}
+
+.LOGO {
+    font-size: 25px;
+}
+
+.Welcome {
+    height: 700px;
+}
+
+.Background {
+  height: 700px;
+  background-image: url('../public/images/CAR.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Background::before {
+  content: "";
+  height: 760px;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 0;
+}
+
+.Welcome-text {
+    height: 200px;
+    margin-left: 150px;
+    position: relative;
+}
+
+
+.Welcome-t {
+    font-size: 70px;
+    margin-top: 0px;
+    margin-bottom:10px;
+    padding-top: 260px;
+}
+
+.Welcome-p {
+    font-size: 20px;
+    margin-left: 4px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+
+.button-w {
+    background-color: #9b0000;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    padding: 20px 50px;
+    margin-top: 40px;
+    margin-right: 50px;
+}
+
+.button-w:hover {
+    background-color: #dc0000;
+    color: #ffffff;
+    transition: 0.2s ease;
+}
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1000px, 1fr));
+  gap: 20px; 
+  padding: 20px;
+  margin-top: 25px;
+}
+
+.product-card {
+  color: white;
+  border-radius: 2px;
+ 
+  transition: transform 0.2s ease;
+  margin-bottom: 50px;
+}
+
+.product-card:hover {
+  transform: scale(1.01);
+}
+
+
+.button-h {
+    background-color: #9b0000;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    padding: 30px 70px;
+    margin-top: 30px;
+    cursor: pointer;
+    margin-left: 50px;
+
+}
+
+.button-h:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+    transition: 0.2s ease;
+}
+
+.avail {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.item-h {
+    font-size: 70px;
+    margin-top: 0px;
+    margin-bottom:10px;
+    margin-left: 50px;
+    -webkit-text-stroke: 0.5px #000000;
+    
+    
+}
+.price-h {
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-left: 50px;
+    
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+}
+
+
+.product-img {
+  width: 100%;
+  height: 700px;
+  display: block;
+  border-radius: 10px;
+  
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 30px;
+
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+
+}
+
+.filter-section {
+  margin: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  justify-content: center;
+    display: flex;
+}
+
+.filter-section select {
+  padding: 5px 10px;
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.footer {
+    background-color: #9b0000;
+    width: 100%;
+    height: 80px;
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+}

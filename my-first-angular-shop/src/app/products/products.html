@@ -1,0 +1,60 @@
+
+
+  <div class="header">
+    <div  class="left-section">
+      <h1 class="LOGO">NEMESIS</h1>
+    </div>
+    
+    <div class="right-section">
+        <a class="home-h" href="#">HOME</a>
+        <a class="products-h" href="#">GARAGE</a>
+        <a class="contact-h" href="#">CONTACT</a>
+        <button class="explore-h">LOGIN</button>
+    </div>
+  </div>
+  
+<div class="Welcome">
+  <div class="Background">
+    <div class="Welcome-text">
+      <h1 class="Welcome-t">DRIVE BEYOND LIMITS</h1>
+      <p class="Welcome-p">Keeping You Moving Since 1975</p>
+      <button class="button-w">DISCOVER MORE ></button>
+    </div>
+  </div>
+</div>
+
+<div class="filter-section">
+  <label for="category">Filter by Category:</label>
+  <select id="category" [(ngModel)]="selectedCategory">
+    <option value="All">All</option>
+    <option value="Sports">Sports</option>
+    <option value="Muscle">Muscle</option>
+    <option value="Hatchback">Hatchback</option>
+  </select>
+</div>
+
+<div class="grid">
+  <div class="product-card" *ngFor="let item of filteredProducts">
+    
+    <div class="image-wrapper">
+      <img [src]="item.image" class="product-img" />
+      <div class="overlay">
+        <h3 class="item-h">{{ item.name }}</h3>
+        <p class="price-h">₱{{ item.price }}</p>
+      
+
+       <p class="avail" style="color:rgb(166, 255, 0);" *ngIf="item.available; else outStock">AVAILABLE</p>
+     <ng-template #outStock>
+        <p class="avail" style="color:red;">OUT OF STOCK</p>
+      </ng-template>
+
+      <button class="button-h" (click)="addToCart(item)">Get A Quote</button>
+    </div>
+   </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p class="footer-text">© 2026 NEMESIS. All rights reserved.</p>
+
+</div>
